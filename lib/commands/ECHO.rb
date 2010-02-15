@@ -7,7 +7,7 @@ class ECHO
 
         Hooks.add( :PARSED, :COMMAND_ECHO ) do |msg|
 
-            p "echo inspect: #{msg.inspect}"
+            #p "echo inspect: #{msg.inspect}"
 
             unless msg.nil? or msg[:message].nil?
                 if msg[:message].first.upcase  == \

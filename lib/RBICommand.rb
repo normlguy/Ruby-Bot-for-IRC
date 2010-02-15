@@ -14,7 +14,7 @@ class Command
         proc = lambda { |*args|
             #thr = Thread.new( args ) { |*args|
                 #lock down ruby a bit before we go calling external commands
-                #$SAFE = 2 # $SAFE is not supported by jRuby
+                $SAFE = 2 # $SAFE is not supported by jRuby
 
                 #puts "(!) " << args.join( " " )
 

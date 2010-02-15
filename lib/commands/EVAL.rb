@@ -7,7 +7,7 @@ class EVAL
         
         Hooks.add( :PARSED, :EVAL ) do |msg|
 
-            p "eval: #{msg.inspect} + frz: #{msg.frozen?}"
+            #p "eval: #{msg.inspect} + frz: #{msg.frozen?}"
             unless msg.nil? or msg[:message].nil?
 
                 if msg[:message].first.upcase  == \
@@ -17,13 +17,13 @@ class EVAL
 
                     ret = ""
 
-                    p "eval'ing: #{str}"
+                    #p "eval'ing: #{str}"
                     begin
                         ret = eval( str )
                     rescue Exception => ex
                         ret = ex.to_s
                     end
-                    p "eval returned '#{ret}'"
+                    #p "eval returned '#{ret}'"
 
                     Commands.queue( "SAY", ret )
 

@@ -9,7 +9,7 @@ class JOIN < Command
 
     check_join = lambda do |msg|
 
-        p "check_join: #{msg.inspect} + #{Hooks.class}"
+        #p "check_join: #{msg.inspect} + #{Hooks.class}"
 
         return nil if msg.nil? or msg[:header][:args].nil?
 

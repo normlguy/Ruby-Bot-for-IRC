@@ -41,7 +41,7 @@ class Hooks
     end
 
     def call( event, args )
-        Log.log( :NOTICE ) { "Trying hook \"" + event.to_s + "\"" }
+        #Log.log( :NOTICE ) { "Trying hook \"" + event.to_s + "\"" }
         return if @hook_list[ event.to_sym ].nil?
 
         ret = nil
@@ -51,7 +51,7 @@ class Hooks
         @hook_list[ event.to_sym ].each do |name|
 
             #begin
-            Log.log( :NOTICE ) { "Calling hook named \"" + name[0].to_s + "\"" }
+            #Log.log( :NOTICE ) { "Calling hook named \"" + name[0].to_s + "\"" }
 
             #p "HERE"
             ret = nil
@@ -67,7 +67,7 @@ class Hooks
                 }
             end
 
-            p "hook '#{name[0]}' returned value '#{ret.inspect}'"
+            # p "hook '#{name[0]}' returned value '#{ret.inspect}'"
             
 
             # => if hooks don't return nil, tell the caller and let them decide how to handle that

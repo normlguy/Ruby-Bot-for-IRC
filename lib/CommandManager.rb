@@ -33,7 +33,7 @@ class Commands
         end
 
         def self.response( cmd, *args )
-                self.instance.response(cmd, *args)
+                self.instance.response( cmd, *args )
         end
 
         def self.queue( cmd, *args )
